@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../styles/styleGeneral.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Cesta</title>
+</head>
+
+<body class="overflow-hidden">
+  <main>
+    <section id="cesta">
+
+      <table class="table table-striped">
+        <thead>
+          <tr class="table-primary">
+            <th colspan="2" style="width:50%">Producto</th>
+            <th style="width:5%">Precio(ud)</th>
+            <th style="width:30%">Precio(total)</th>
+          </tr>
+        </thead>
+        <tbody  id="cesta-tbody">
+          
+        </tbody>
+        <tfoot>
+          <tr>
+            <th class="text-end" colspan="3">
+              Precio total del pedido:
+            </th>
+            <th class="text-center" id="result">
+
+            </th>
+          </tr>
+          <tr  class="table-warning">
+            <td style="width:100%" colspan="100%">
+              <div class="btn-group w-100">
+                <button class="btn btn-danger" id="cancelar">Cancelar</button>
+                <button class="btn btn-success" disabled>Comprar( Desactivado por hackeo de un jacoso del tete D: )</button>
+              </div>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
+  <script>
+
+  </script>
+</body>
+<script src="scripts/store.js"></script>
+<script src="scripts/ProductClass.js"></script>
+<script src="scripts/cesta.js"></script>
+
+</html>

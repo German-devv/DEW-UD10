@@ -1,5 +1,5 @@
 
-div {
-    margin: 10px !important;
+.img{
+    transform: scaleX(-1);
 }
 

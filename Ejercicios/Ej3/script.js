@@ -1,20 +1,27 @@
-const principal1  = document.getElementById('principal1');
-const principal2  = document.getElementById('principal2');
-const secundaria1 = document.getElementById('secundaria1');
+const image = document.getElementById('image');
+const moveButton = document.getElementById('Mover');
+const resetButton = document.getElementById('Situar');
+const section = document.getElementById('section').offsetWidth;
 
 
-principal1.addEventListener('mouseover', () =>{
-    sustituir('secundaria');
-});
-principal1.addEventListener('mouseleave', () =>{
-    sustituir('principal');
-});
-secundaria1.addEventListener('click', () =>{
-    window.open('','_parent',''); 
-    window.close();// ES IMPOSIBLE CERRAR LA VENTANA EN CHROME
+moveButton.addEventListener('click', () => mover());
+
+resetButton.addEventListener('click', function() {
+  image.style.transition = "all 0s";
+  image.style.transform = "translateX(0px)";
 });
 
-function sustituir(imagen){
-    principal1.src = '../../Images/Rollover/'+imagen+'1.gif';
-    principal2.src = '../../Images/Rollover/'+imagen+'2.gif';
+
+async function mover(){
+    image.style.transition = "all 3s";
+    image.style.transform = `translateX(${section - image.offsetWidth}px)`;
+    
+
+
+  setTimeout(function() {
+    image.style.transition = "all 3s";
+
+    image.style.transform = "translateX(0px)";
+    image.style.filter = "none";
+  }, 3000);
 }

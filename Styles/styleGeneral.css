@@ -13,7 +13,7 @@ header {
 }
 
 section,
-header, iframe {
+header{
     max-width: 1400px;
 
     margin-bottom: 50px;
